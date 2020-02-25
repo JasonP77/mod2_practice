@@ -1,0 +1,11 @@
+<%=form_for @restaurant do |r| %>
+	<%= r.label :name %>
+	<%= r.text_field :name %>
+	<%= r.label :location %>
+	<%= r.text_field :location %>
+	<%= r.label :user_id %>
+	<%= r.collection_select :user_id, User.all, :id, :name %>
+	<%= r.label :food_id %>
+	<%= r.collection_select :food_id, Food.all, :id, :name %>
+	<%= r.submit %>
+	<% end %>

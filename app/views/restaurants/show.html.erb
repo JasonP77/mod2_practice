@@ -1,0 +1,5 @@
+<h3>Our recent customers</h3>
+<p><%= link_to @restaurants.user.name, user_path(@restaurants.user) %> enjoys <%= link_to @restaurants.food.name, food_path(@restaurants.food) %></p>
+<div><%= link_to "Edit Page", edit_restaurant_path %></div>
+<div><%= link_to "Back to Index Page", restaurants_path %></div>
+<div><%= link_to "Delete this Restaurant", restaurant_path, method: "DELETE"%></div>
